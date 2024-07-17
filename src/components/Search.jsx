@@ -1,4 +1,7 @@
-function Search() {
+import { useState } from "react";
+import axios from "axios";
+
+function Search({ handlerFilter }) {
   return (
     <div className="d-inline-flex justify-content-center align-items-center w-100 p-4">
       <div className="input-group mb-2 w-50">
@@ -8,6 +11,7 @@ function Search() {
           </span>
         </div>
         <input
+          onChange={handlerFilter}
           type="text"
           className="form-control search-bar"
         />
